@@ -1,0 +1,20 @@
+{
+  "name": "node-lisk-vanitygen",
+  "version": "1.0.0",
+  "description": "LISK vanitygen",
+  "main": "index.js",
+  "repository": {
+    "url": "git://github.com/rwilinski/node-lisk-vanitygen.git"
+  },
+  "keywords": [
+    "node",
+    "lisk",
+    "vanitygen",
+    "bitcoin"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Radosław Wiliński",
+  "license": "MIT"
+}
