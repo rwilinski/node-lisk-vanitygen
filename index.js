@@ -3,7 +3,6 @@
 const bignum = require('bignum');
 const bip39 = require('bip39');
 const crypto = require('crypto');
-const fs = require('fs');
 const sodium = require('sodium');
 
 const noop = function() {};
@@ -82,6 +81,7 @@ LiskVanitygen.prototype.run = function(foundCallback, statusCallback) {
     const startTime = new Date().valueOf();
 
     let found = false;
+    let foundCount = 0;
     let count = 1;
     let lastMessage = 0;
 
@@ -95,7 +95,8 @@ LiskVanitygen.prototype.run = function(foundCallback, statusCallback) {
             statusCallback({
                 count,
                 time,
-                avg: parseFloat((count / time).toFixed(2))
+                avg: parseFloat((count / time).toFixed(2)),
+                foundCount
             });
 
             lastMessage = singleStartTime;
@@ -110,6 +111,8 @@ LiskVanitygen.prototype.run = function(foundCallback, statusCallback) {
                 address: generated.address,
                 passphrase: generated.passphrase
             });
+
+            foundCount++;
         }
 
         count++;
