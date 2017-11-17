@@ -16,5 +16,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Radosław Wiliński",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bignum": "^0.12.5",
+    "bip39": "^2.4.0",
+    "sodium": "^2.0.1"
+  }
 }
